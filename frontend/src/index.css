@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Global full-height */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Light mode palette */
+body {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  min-height: 100vh;
+}
+
+/* Dark mode palette */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Universal font */
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Scrollbar hidden */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Active link styling */
+a.active hr {
+  display: block;
+}
+
+/* Headings palette */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #f5f5f5;
+}
+
+/* Subtext palette */
+small,
+.subtext {
+  color: #7a7a7a;
+}
+
+body.dark small,
+body.dark .subtext {
+  color: #c5a572;
+}
+
+/* Optional highlights & buttons */
+a,
+.highlight {
+  color: #c5a572;
+}
+
+button,
+.btn-primary {
+  background-color: #c5a572;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn-primary:hover {
+  background-color: #a48850;
+}
+
+/* Disabled button style for language buttons */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Gradient border animation */
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientBorder {
+  background-image: linear-gradient(270deg, #ffffff33, #ffffff66, #ffffff33);
+  background-size: 200% 200%;
+  animation: gradientBorder 6s ease infinite;
+}
+
+/* Google Translate Styling */
+#google_translate_element {
+  width: 100%;
+  /* Keep hidden as per your React code */
+  display: none;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Native translate dropdown styling */
+.goog-te-combo {
+  width: 100% !important;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode dropdown */
+body:not(.dark) .goog-te-combo {
+  background-color: #c5a572;
+  color: #fff;
+}
+
+/* Dark mode dropdown */
+body.dark .goog-te-combo {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Hover effect */
+.goog-te-combo:hover {
+  background-color: #a48850;
+}
+
+/* Click-to-open dropdown box (if you use it) */
+.language-dropdown-box {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 160px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dark mode dropdown box */
+body.dark .language-dropdown-box {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Smooth hover for box (optional) */
+.language-dropdown-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .language-dropdown-box {
+    min-width: 140px;
+  }
+}

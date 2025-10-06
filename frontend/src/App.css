@@ -1,0 +1,61 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #C5A572); /* Primary / Metallic Gold */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #B08D57); /* Accent / Bronze */
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component */
+.card {
+  padding: 2em;
+  background-color: #FFFFFF; /* Light card background */
+  color: #3A3A3A; /* Card text */
+  border: 1px solid #B08D57; /* Accent / Bronze border */
+  border-radius: 0.5rem;
+}
+
+.dark .card {
+  background-color: #2C2C2C; /* Dark mode card background */
+  color: #FFFFFF; /* Dark mode card text */
+  border-color: #C5A572; /* Metallic Gold border in dark mode */
+}
+
+/* Links / subtext */
+.read-the-docs {
+  color: #7A7A7A; /* Medium Gray */
+}
+
+.dark .read-the-docs {
+  color: #C5A572; /* Metallic Gold in dark mode for better contrast */
+}
+
