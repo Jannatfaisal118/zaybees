@@ -13,8 +13,8 @@ import Settings from "./pages/Settings";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// export const backendUrl = "http://localhost:4000";
-export const backendUrl = "https://zaybees-backend.vercel.app/";
+export const backendUrl = "http://localhost:4000";
+// export const backendUrl = "https://zaybees-backend.vercel.app/";
 export const currency = "Rs. ";
 
 const App = () => {
