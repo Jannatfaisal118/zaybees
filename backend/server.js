@@ -28,13 +28,7 @@ app.use(express.json())
 
 // ✅ CORS configuration
 app.use(cors({
-  origin: [
-//     "https://zaybees.vercel.app",
-//     "https://zaybees-d8pm-krtssjzu5-jannat-faisals-projects.vercel.app",
-//     "https://admin-zaybees.vercel.app"
-"http://localhost:5174" ,
-"http://localhost:5173"
-  ],
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 }));
