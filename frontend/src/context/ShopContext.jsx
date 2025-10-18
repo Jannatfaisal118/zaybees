@@ -9,7 +9,7 @@ export { ShopContext };
 const ShopContextProvider = (props) => {
 
   const delivery_fee = 100;
-  const backendUrl = "http://localhost:4000";
+  const backendUrl = "https://zaybees-backend.onrender.com";
           // const backendUrl = "https://zaybees-backend.vercel.app/";
   const MIN_VOUCHER_AMOUNT = 500;
 
